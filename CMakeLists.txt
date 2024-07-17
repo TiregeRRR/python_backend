@@ -237,6 +237,7 @@ target_link_libraries(
     ZLIB::ZLIB
     -larchive
     -ldl                          # dlopen
+    -lutil
 )
 
 target_link_libraries(
@@ -249,6 +250,7 @@ target_link_libraries(
    -lrt                           # shared memory 
    -larchive                      # libarchive
    -ldl
+   -lutil
 )
 
 set_target_properties(
