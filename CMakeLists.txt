@@ -232,11 +232,11 @@ target_link_libraries(
     dlpack
     Threads::Threads
     triton-backend-utils          # from repo-backend
-    -ldl                          # dlopen
     -lrt                          # shared memory 
     triton-core-serverstub        # from repo-core
     ZLIB::ZLIB
     -larchive
+    -ldl                          # dlopen
 )
 
 target_link_libraries(
@@ -248,6 +248,7 @@ target_link_libraries(
    pybind11::embed
    -lrt                           # shared memory 
    -larchive                      # libarchive
+   -ldl
 )
 
 set_target_properties(
