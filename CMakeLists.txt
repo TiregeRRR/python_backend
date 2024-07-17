@@ -302,6 +302,7 @@ else()
       triton-core-serverstub        # from repo-core
       ZLIB::ZLIB
       -larchive
+      -ldl
   )
 
   target_link_libraries(
@@ -314,6 +315,7 @@ else()
     pybind11::embed
     -lrt                           # shared memory
     -larchive                      # libarchive
+    -ldl
   )
 endif()
 
